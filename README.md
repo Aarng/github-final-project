@@ -6,37 +6,56 @@ A simple calculator that computes the simple interest based on the given princip
 
 The simple interest is calculated using the formula:
 
-\[ \text{Simple Interest} = P \times T \times R \]
+\[ \text{Simple Interest} = P \times T \times R / 100 \]
 
 Where:
 - **P** = Principal amount
 - **T** = Time period in years
-- **R** = Annual rate of interest (as a decimal or percentage)
+- **R** = Annual rate of interest (percentage)
 
 ## Input
 The program requires the following inputs:
 - `P`: Principal amount (numeric value)
 - `T`: Time period in years (numeric value)
-- `R`: Annual rate of interest (numeric value)
+- `R`: Annual rate of interest (numeric value in percentage)
 
 ## Output
 The program computes and returns the simple interest based on the provided inputs.
 
-## Example
+## Example Usage (Bash Script)
 
-```python
-# Example usage in Python
-P = 1000  # Principal amount
-T = 5  # Time period in years
-R = 0.05  # Annual rate of interest (5%)
+```bash
+#!/bin/bash
+# This script calculates simple interest given principal,
+# annual rate of interest and time period in years.
+# Do not use this in production. Sample purpose only.
+# Author: Upkar Lidder (IBM)
+# Additional Authors:
+# <your GitHub username>
 
-simple_interest = P * T * R
-print(f"Simple Interest: {simple_interest}")
+# Input:
+echo "Enter the principal:"
+read p
+echo "Enter rate of interest per year:"
+read r
+echo "Enter time period in years:"
+read t
+
+# Calculation:
+s=$((p * t * r / 100))
+
+echo "The simple interest is: $s"
 ```
 
 ### Expected Output:
 ```
-Simple Interest: 250.0
+Enter the principal:
+1000
+Enter rate of interest per year:
+5
+Enter time period in years:
+5
+The simple interest is: 250
 ```
 
 ## Usage
